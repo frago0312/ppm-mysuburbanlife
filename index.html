@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boooh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg" style="background-color: white;">
+    <div class="container-fluid d-flex justify-content-between">
+        <div class="d-flex">
+            <div class="btn-group" role="group" aria-label="Icon button group">
+                <input id="search-bar" class="form-control" type="search" placeholder="Search" aria-label="Search"
+                       style="display: none;">
+                <button id="search-btn" class="nav-btn nav-btn-light transparent border" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+                <button id="menu-button" class="nav-btn nav-btn-light transparent border" type="button">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            <a href="index.html">
+                <!--<img src="https://placehold.co/400x32?text=Lorem+Ipsum+News+Network" alt="News Network">-->
+                <img class="logo-padding" src="images/3c6aeba2-ae50-4876-bb06-899a8057ab84.svg" alt="News Network">
+            </a>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-black-square ml-auto" data-bs-toggle="dropdown">
+                <span>Sign In</span>
+                <i class="bi bi-person-fill"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="index.html">Sign in</a>
+                <a class="dropdown-item" href="index.html">Subscribe</a>
+                <a class="dropdown-item" href="index.html">Print Subscriber? Activate Now</a>
+                <a class="dropdown-item" href="index.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--Menù a tendina e overlay-->
+
+<div id="overlay"></div>
+
+<div id="menu">
+    <!-- Search bar -->
+    <div class="search-container">
+        <label for="menu-search-bar">Search:</label>
+        <input type="text" id="menu-search-bar" placeholder="Search...">
+        <button class="search-btn"><i class="bi bi-search"></i></button>
+    </div>
+    <ul>
+        <li><a href="index.html">Subscribe</a></li>
+        <li><a href="index.html">Digital Account</a></li>
+        <li><a href="index.html">Print Account</a></li>
+        <li><a href="index.html">Contact Us</a></li>
+        <li><a href="index.html">eNewspapers</a></li>
+        <li><a href="index.html">Illinois News</a></li>
+        <li><a href="index.html">AgriNews</a></li>
+        <li><a href="index.html">The First Hundred Miles</a></li>
+        <li><a href="index.html">Friday Night Drive</a></li>
+        <li><a href="index.html">The Scene</a></li>
+        <li><a href="index.html">Shaw Local Radio</a></li>
+        <li><a href="index.html">Starved Rock Country</a></li>
+        <li><a href="index.html">News</a></li>
+        <li><a href="index.html">Bears</a></li>
+        <li><a href="index.html">Sports</a></li>
+        <li><a href="index.html">Pro Football Weekly</a></li>
+        <li><a href="index.html">Newsletter</a></li>
+        <li><a href="index.html">Opinion</a></li>
+        <li><a href="index.html">Thank You First Responders</a></li>
+        <li><a href="index.html">Thank You Teachers</a></li>
+        <li><a href="index.html">Thank You Veterans</a></li>
+        <li><a href="index.html">Wheels</a></li>
+        <li><a href="index.html">Obituaries</a></li>
+        <li><a href="index.html">Deals</a></li>
+        <li><a href="index.html">Public Notices</a></li>
+        <li><a href="index.html">Jobs</a></li>
+        <li><a href="index.html">Classified</a></li>
+        <li><a href="index.html">Shaw Media Marketing</a></li>
+        <li><a href="index.html">Historical Archive</a></li>
+        <li><a href="index.html">Shaw Careers</a></li>
+        <li><a href="index.html">Privacy Policy</a></li>
+    </ul>
+    <div style="height: 80vh;"></div>
+</div>
+
+<!-- Div con pubblicità -->
+<div class="row">
+    <div class="col-md-2 d-none d-md-block"></div>
+    <div class="col-md-8 col-12" style="max-height: 400px;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img alt="Big advertisement" src="https://placehold.co/800x300/D99814/162B75?text=Big+Advertisement" style="max-width: 90%; max-height: 90%;">
+        </div>
+    </div>
+    <div class="col-md-2 d-none d-md-block"></div>
+</div>
+
+
+
+<div class="image-container">
+    <img src="images/my-suburban-life.svg" alt="My Suburban Life">
+</div>
+<hr style="margin: 2px">
+
+<div class="title">
+    <div class="row title-row" style="height: 60px; justify-content: space-between; align-items: center;">
+        <div class="col-xl-1 d-none d-xl-block"></div>
+        <div class="col-md-3 col-xl-2" style="height: 40px; justify-content: center; align-items: center;">
+            <p style="margin: 0"><span id="currentDate"></span></p>
+        </div>
+        <div class="col-md-6 text-center" style="height: 50px; justify-content: center; align-items: center;">
+            <img src="images/DuPage.svg" alt="Logo" style="height: auto; max-height: 100%; max-width: 100%;">
+        </div>
+        <div class="col-md-3 col-xl-2 text-end" style="height: 40px; justify-content: center; align-items: center;">
+            <i class="bi bi-envelope-fill" style="margin-right: 15px;"></i>
+            <i class="bi bi-facebook" style="margin-right: 15px;"></i>
+            <i class="bi bi-twitter"></i>
+        </div>
+        <div class="col-xl-1 d-none d-xl-block"></div>
+    </div>
+    <div class="col-12 col-xl-10 mx-auto">
+        <hr style="margin: 0">
+    </div>
+    <div class="row second-navbar" style="height: 36px; justify-content: space-between; align-items: center;">
+        <div class="col-lg-1 d-none d-lg-block"></div>
+        <div class="col-12 col-lg-10">
+            <nav class="custom-navbar" style="margin:5px 50px">
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Thank You First Responders</a></li>
+                    <li><a href="#">The Scene</a></li>
+                    <li><a href="#">eNewspaper</a></li>
+                    <li><a href="#">Obituaries</a></li>
+                    <li><a href="#">Event Calendar</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-1 d-none d-lg-block"></div>
+    </div>
+</div>
+
+<div id="first-responders" class="image-container">
+    <img src="images/First+Responder+HERE+1200x120_SLM.jpg" alt="First Responders">
+</div>
+
+<div style="height: 24px;"></div>
+
+<div class="news" style="margin: 0 auto; height:1000px">
+    <div class="row">
+        <div class="col-lg-1 d-none d-lg-block" style=""></div>
+
+
+        <div id="first-news" class="col-lg-6 col-12" style="border-right: 1px solid #D2D2D2; padding-right:20px; padding-left:20px">
+            <div id="main-headline" class="big-news">
+                <h1 class="big-news-title">Main Headline: lorem ipsum dolor sit amet </h1>
+                <img class="big-news-image" src="https://placehold.co/600x400/D99814/162B75?text=Main+Headline"
+                     alt="Descrizione dell'immagine" style="width: 100%">
+                <p class="big-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum.</p>
+                <p class="card-text"><small class="text-body-secondary">By Francesco Gori : Lorem Ipsum Media Group -
+                    May 08, 2024, at 21:18 am CDT </small></p>
+            </div>
+            <hr style="margin:20px 0">
+            <div id="top-stories" class="grid-news">
+                <h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 26px; font-weight:bold; margin-bottom:24px">
+                    Top Stories</h2>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="news-item" style="padding-bottom: 15px">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+1"
+                                 alt="News 1">
+                        </div>
+                        <div class="news-item">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+2"
+                                 alt="News 2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="news-item" style="padding-bottom: 15px">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+3"
+                                 alt="News 3">
+                        </div>
+                        <div class="news-item">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+4"
+                                 alt="News 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin:20px 0">
+            <img src="images/TY-First-Responders.jpg" alt="TY-First-Responders"
+                 style="width: 100%; padding-bottom:20px">
+            <div id="first-responders-news" class="grid-news">
+                <h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 26px; font-weight:bold; margin-bottom:24px">
+                    Our tribute to DuPage and Cook County first responders</h2>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="news-item" style="padding-bottom: 15px">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+1"
+                                 alt="News 1">
+                        </div>
+                        <div class="news-item">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+2"
+                                 alt="News 2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="news-item" style="padding-bottom: 15px">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+3"
+                                 alt="News 3">
+                        </div>
+                        <div class="news-item">
+                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.</p>
+                            <img class="news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+4"
+                                 alt="News 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+            <div id="news-alert">
+                <h2 style="font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight:bold; margin-bottom:0; color:#191919">
+                    Sign up for local news text alerts</h2>
+                <div id="sign-up" style="padding: 20px">
+                    <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight:bold; margin-bottom:16px; color: #162B75">
+                        DuPage and Cook County News</h1>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; margin-bottom:16px; color: #162B75">
+                        Deepen the connection to your community with DuPage and Cook County text alerts, part of the
+                        Shaw Local News Network. Engage with our newsroom, get breaking news updates, community news,
+                        high school sports and more. We’ll usually text you a few times per week. Enroll today to start
+                        your enhanced connection to DuPage and Cook County news.</p>
+                    <div class="banner">
+                        <img src="images/Shaw_Local_logo_400x400.jpg" alt="Banner Image" class="banner-image">
+                        <div class="banner-text">Sign up for free alerts</div>
+                    </div>
+                </div>
+                <div style="height: 20px;"></div>
+                <div class="telephone-form" style="box-shadow: 0 0 5px rgba(217, 152, 20, 0.5); border-radius: 10px">
+                    <p class="mobile-number" style="margin:0; font-weight:bold">MOBILE NUMBER</p>
+                    <form>
+                        <label for="phone"></label><input type="tel" id="phone" name="phone"
+                                                          placeholder="Enter your phone number">
+                        <div class="checkbox">
+                            <input type="checkbox" id="consent" name="consent">
+                            <label for="consent">By checking this box, I consent to receive texts from Shaw Local News
+                                Network.</label>
+                        </div>
+                        <input class="submit-number" type="submit" value="Continue">
+                    </form>
+                </div>
+                <div class="banner-icons">
+                    <i class="bi bi-telephone"></i>
+                    <i class="bi bi-patch-check"></i>
+                    <i class="bi bi-person-rolodex"></i>
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+            <div id="news-alert-2">
+                <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight:bold; margin-bottom:16px; color: #191919">
+                    Get breaking news sent to your inbox</h1>
+                <div class="newsletter-form"
+                     style="box-shadow: 0 0 5px rgba(217, 152, 20, 0.5); border-radius: 10px; padding:16px">
+                    <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 26px; margin-bottom:0; font-weight: bold; color: #D99814">
+                        DuPage and Cook County Breaking News Alerts</h1>
+                    <p><small class="text-body-secondary">Be the first to know! Sign up to receive breaking news
+                        alerts.</small></p>
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <input class="submit-email" type="submit" value="SIGN UP">
+                    </form>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+            <div id="Photo Galleries">
+                <h2 style="font-family: Arial, Helvetica, sans-serif; color:#191919; font-size: 20px; font-weight:bold; margin-bottom:24px">
+                    Photo Galleries</h2>
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <img src="https://placehold.co/600x400/D99814/162B75?text=Photo+Gallery+1"
+                             alt="Photo News 1" style="width: 100%">
+                    </div>
+                    <div class="col-md-7 col-12">
+                        <h1 style="font-family: Arial, Helvetica, sans-serif; color:#191919; font-size: 26px; font-weight:bold;">
+                            Photo Article 1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id iaculis sapien. Ut id
+                            viverra felis. Cras mauris ipsum, blandit.
+                        </p>
+                        <p><small class="text-body-secondary">By Francesco Gori : Lorem Ipsum Media Group - May 08,
+                            2024, at 21:18 am CDT </small></p></div>
+                </div>
+                <hr style="margin:20px 0">
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <img src="https://placehold.co/600x400/162B75/D99814?text=Photo+Gallery+2"
+                             alt="Photo News 2" style="width: 100%">
+                    </div>
+                    <div class="col-md-7 col-12">
+                        <h1 style="font-family: Arial, Helvetica, sans-serif; color:#191919; font-size: 26px; font-weight:bold;">
+                            Photo Article 2</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id iaculis sapien. Ut id
+                            viverra felis. Cras mauris ipsum, blandit.
+                        </p>
+                        <p><small class="text-body-secondary">By Francesco Gori : Lorem Ipsum Media Group - May 08,
+                            2024, at 21:18 am CDT </small></p></div>
+                </div>
+                <hr style="margin:20px 0">
+
+            </div>
+
+
+        </div>
+
+        <div id="second-news" class="col-lg-4 col-12" style="padding-left:20px; padding-right:20px">
+            <div style="height: 50px;"></div>
+            <img id="second-row-advertisement" src="https://placehold.co/600x400/162B75/D99814?text=Advertisement+2+Row" alt="Second row advertisement" style="display: block; margin-left:auto; margin-right:auto; width: 80%;">
+            <div style="height: 50px;"></div>
+            <div class="second-row-news">
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+1" alt="Second row news 1">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+2" alt="Second row news 2">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+3" alt="Second row news 3">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+4" alt="Second row news 4">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/162B75/D99814?text=News+5" alt="Second row news 5">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+                <div class="second-row-news-item">
+                    <img class="second-row-news-image" src="https://placehold.co/317x211/D99814/162B75?text=News+6" alt="Second row news 6">
+                    <p class="second-row-news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan est vel turpis euismod, quis rhoncus turpis.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-lg-1 d-none d-lg-block" style=""></div>
+
+    </div>
+</div>
+
+
+<div><p style="height: 8000px"></p></div>
+
+<!-- Subscribe in basso -->
+<div id="bottom-element">
+    <div class="flex-row">
+        <div class="col-12 text-center">
+            <p class="first-line">Limited time: Less than 20¢ per day
+            <p>
+            <p class="second-line">With an annual subscription</p>
+        </div>
+        <button class="btn btn-yellow ml-auto" onclick="    window.location.href = 'index.html';">
+            <span>SUBSCRIBE</span>
+        </button>
+    </div>
+    <i class="bi bi-x close-btn"></i>
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+body{overflow-x:hidden}
+
+/*Navbar*/
+.navbar{
+    height: 56px;
+    z-index: 2;
+}
+
+.nav-btn{
+    width: 34px;
+    height: 32px;
+}
+
+.btn-group{
+    padding-left: 8px;
+}
+
+.logo-padding{
+    padding-left: 8px;
+}
+
+
+
+/*Comportamento search bar*/
+#search-bar {
+    height: 32px;
+    display: none;
+    font-size: 1rem;
+}
+
+.btn-black-square {
+    background-color: black !important;
+    border-radius: 0 !important;
+    color: white !important;
+    border: 0 !important;
+    height: 32px !important;
+    width: 80px !important;
+    font-size: 0.8rem !important
+}
+
+
+/* Stile per il menu a tendina */
+#menu::-webkit-scrollbar {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 329px; /* Larghezza del menu */
+    height: 100%; /* Altezza del menu */
+    background-color: #292929;
+    color: #FFFFFF; /* Testo bianco */
+    overflow: auto;
+    transition: transform 0.3s ease-in-out; /* Apertura in 0.3 secondi */
+    transform: translateX(-100%);
+    z-index:2;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#menu.show {
+    transform: translateX(0);
+}
+
+#menu-search-bar{
+    width: 292px;
+    height: 32px;
+    display: block;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+label[for="menu-search-bar"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-btn {
+    border: none;
+    background: none;
+    width: 37px;
+    height: 32px;
+}
+
+.search-btn .bi {
+    color: #FFFFFF;
+}
+
+#menu ul{
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    width: 329px; /* Larghezza della voce del menu */
+    height: 40px; /* Altezza della voce del menu */
+    list-style-type: none; /* Rimuove i punti di elenco */
+}
+
+#menu ul li a {
+    color: #FFFFFF; /* Colore del testo bianco */
+    font-family: Arial, Helvetica, sans-serif; /* Cambia questo con il nome del font desiderato */
+    font-weight: bold;
+    text-decoration: none; /* Rimuove il sottolineamento */
+    display: block; /* Permette di cliccare sull'intera area della voce del menu */
+    line-height: 40px; /* Centra verticalmente il testo */
+    padding-left: 20px; /* Spazio a sinistra del testo */
+}
+
+#menu ul li a:hover {
+    background-color: #616161;
+}
+
+#menu ul li:first-child {
+    margin-top: 10px; /* Aggiunge dello spazio sopra la prima voce del menu */
+}
+
+/* Stile per l'overlay */
+#overlay {
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 100%; /* Larghezza dell'overlay */
+    height: calc(100% - 56px); /* Altezza dell'overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente nero */
+    z-index: 1; /* L'overlay si trova sopra gli altri elementi */
+    display: none; /* Inizialmente l'overlay non è visibile */
+}
+
+#overlay.show {
+    display: block; /* Quando l'overlay ha la classe "show", diventa visibile */
+}
+
+.card {
+    margin-top: 19px; /* Aggiusta questo valore in base alle tue esigenze */
+}
+
+#bottom-element {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 87px;
+    background-color: rgb(22, 43, 117);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 20px;
+    z-index: 2;
+}
+
+#bottom-element .flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom-element .first-line {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Sostituisci con il font desiderato */
+    font-size: 26px; /* Sostituisci con la grandezza desiderata */
+    font-weight: bold;
+    color: white;
+    line-height: 5px;
+    margin-bottom: 0;
+}
+
+#bottom-element .second-line {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Sostituisci con il font desiderato */
+    font-size: 14px; /* Sostituisci con la grandezza desiderata */
+    font-weight: bold;
+    color: white;
+    line-height: 5px;
+    margin-bottom: 0;
+}
+
+.btn-yellow {
+    background-color: #D99814 !important;
+    color: white !important;
+}
+
+#bottom-element .close-btn {
+    position: absolute; /* Posiziona l'icona in modo assoluto rispetto al div padre */
+    top: 0; /* Distanza dall'alto */
+    right: 10px; /* Distanza dalla destra */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.image-container {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-height: 100%;
+}
+
+#currentDate{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Sostituisci con il font desiderato */
+    font-size: 14px; /* Sostituisci con la grandezza desiderata */
+    font-weight: bold;
+    color: black;
+
+}
+
+
+.custom-navbar {
+    background-color: white;
+}
+
+.custom-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+.custom-navbar ul li a {
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#first-responders {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first-responders img {
+    max-height: 100%;
+}
+
+
+
+#main-headline .big-news-title {
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-headline .big-news-image {
+    width: 100%;
+}
+
+#main-headline .big-news-text {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 8px 0;
+}
+
+
+
+.news-text {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.news-image {
+    width: 100%;
+    /* Aggiungi qui eventuali stili per l'immagine */
+}
+
+
+.banner {
+    display: flex;
+    align-items: center;
+}
+
+.banner-image {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #D1D3D4; /* Aggiunge un bordo nero */
+    border-radius: 10px; /* Arrotonda gli angoli */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra sotto l'immagine */
+}
+
+.banner-text {
+    width: 100%;
+    height: 48px;
+    color: #212529;
+    background-color: #D1D3D4;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.telephone-form {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.telephone-form .mobile-number {
+    font-size: 13px;
+    color: #114b5f;
+
+}
+
+form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+form .checkbox label {
+    padding-left: 15px;
+}
+
+.submit-number {
+    background-color: #D99814;
+    width: 100%;
+    color: #162B75;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.banner-icons {
+    margin-top:5px;
+    background-color: #162B75;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-icons i {
+    color: rgb(60, 219, 192);
+    font-size: 24px;
+}
+
+.submit-email{
+    background-color: #D99814;
+    border-radius: 4px;
+    border: none;
+    height: 32px;
+    width: 80px;
+}
+
+/*Second row*/
+.second-row-news {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-row-news-item {
+    display: flex;
+    margin-bottom: 20px; /* Aggiunge spazio tra gli elementi */
+    border-bottom: 1px solid #D2D2D2; /* Cambia il colore come preferisci */
+    padding-bottom: 20px; /* Aggiunge spazio tra il testo e il bordo */
+
+}
+
+.second-row-news-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.second-row-news-text {
+    flex: 1;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #191919;
+    margin-left: 10px; /* Aggiunge spazio tra l'immagine e il testo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stili per larghezza inferiore a 420px */
+@media (max-width: 420px) {
+}
+
+/* Stili per larghezza compresa tra 420px e 460px */
+@media (min-width: 420px) and (max-width: 460px) {
+}
+
+/* Stili per larghezza compresa tra 460px e 600px */
+@media (min-width: 460px) and (max-width: 600px) {
+}
+
+/* Stili per larghezza compresa tra 600px e 768px */
+@media (min-width: 600px) and (max-width: 768px) {
+}
+
+/* Stili per larghezza maggiore di 768px */
+@media (min-width: 768px) {
+}
