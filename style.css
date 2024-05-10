@@ -387,8 +387,8 @@ form .checkbox label {
 }
 
 .second-row-news-image {
-    flex: 0 0 40%;
-    max-width: 40%;
+    flex: 0 0 30%;
+    max-width: 30%;
 }
 
 .second-row-news-text {
@@ -397,6 +397,14 @@ form .checkbox label {
     font-family: Arial, Helvetica, sans-serif;
     color: #191919;
     margin-left: 10px; /* Aggiunge spazio tra l'immagine e il testo */
+}
+
+
+
+
+.slideshow-element * {
+    max-width: 100%; /* Imposta la larghezza massima di tutti gli elementi all'interno delle colonne */
+    box-sizing: border-box; /* Assicura che il padding e il bordo siano inclusi nella larghezza */
 }
 
 
