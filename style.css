@@ -400,12 +400,114 @@ form .checkbox label {
 }
 
 
+.other-news{
+    padding-left: 8%;
+    padding-right: 8%;
+}
 
 
 .slideshow-element * {
     max-width: 100%; /* Imposta la larghezza massima di tutti gli elementi all'interno delle colonne */
-    box-sizing: border-box; /* Assicura che il padding e il bordo siano inclusi nella larghezza */
 }
+
+
+.grid-news .grid-col .grid-col-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.grid-news .grid-col .grid-col-ul{
+    list-style-type: none;
+    padding-left: 20px;
+}
+.grid-news .grid-col .grid-col-ul .grid-col-news{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #D2D2D2;
+    padding: 15px 0;
+}
+
+.three-column-news{
+}
+
+.column-news {
+    border: 1px solid #D2D2D2;
+
+}
+
+
+.column-news * {
+    max-width: 100%; /* Imposta la larghezza massima di tutti gli elementi all'interno delle colonne */
+}
+.column-news .column-news-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top:12px
+}
+
+.column-news .column-news-subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top:12px;
+}
+.column-news .column-news-big-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 12px;
+}
+.column-news .column-news-article{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D2D2D2;
+    padding-top:12px;
+}
+.column-news .column-news-article .column-news-article.p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+/*
+.footer-icons {
+    margin-left: 10px;
+}
+
+.footer-text {
+    color: #6c7778;
+    margin-right: 10px;
+}*/
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    width: auto;
+    background-color: white;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.site-footer .buttons {
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer .copyright-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer .copyright-text h6 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #6c7778;
+}
+
+
 
 
 
