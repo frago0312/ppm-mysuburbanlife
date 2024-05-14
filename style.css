@@ -4,6 +4,7 @@ body{overflow-x:hidden}
 .navbar{
     height: 56px;
     z-index: 2;
+    background-color: white;
 }
 
 .nav-btn{
@@ -25,12 +26,9 @@ body{overflow-x:hidden}
 }
 
 
-
-
-/*Comportamento search bar*/
+/*Comportamento search bar e suoi oggetti*/
 #search-bar {
     height: 32px;
-    display: none;
     font-size: 1rem;
 }
 
@@ -134,7 +132,9 @@ label[for="menu-search-bar"] {
     margin-top: 10px; /* Aggiunge dello spazio sopra la prima voce del menu */
 }
 
+
 /* Stile per l'overlay */
+
 #overlay {
     position: fixed;
     left: 0;
@@ -150,9 +150,8 @@ label[for="menu-search-bar"] {
     display: block; /* Quando l'overlay ha la classe "show", diventa visibile */
 }
 
-.card {
-    margin-top: 19px; /* Aggiusta questo valore in base alle tue esigenze */
-}
+
+/* Stile per il bottom element */
 
 #bottom-element {
     position: fixed;
@@ -206,6 +205,19 @@ label[for="menu-search-bar"] {
     cursor: pointer;
 }
 
+/* Stile per advertisement e immagini iniziali */
+
+.advertisement-container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.advertisement-container-1 img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
 .image-container {
     height: 24px;
     display: flex;
@@ -217,17 +229,48 @@ label[for="menu-search-bar"] {
     max-height: 100%;
 }
 
+
+/* Stile per navbar e sue componenti */
+
+.title-row{
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-little-element{
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-central-element{
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.title-central-element img{
+    height: auto;
+    max-height: 100%;
+    max-width: 90%;
+}
+
 #currentDate{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Sostituisci con il font desiderato */
     font-size: 14px; /* Sostituisci con la grandezza desiderata */
     font-weight: bold;
     color: black;
-
 }
 
+.second-navbar{
+    height: 36px;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .custom-navbar {
     background-color: white;
+    margin: 5px 10px;
 }
 
 .custom-navbar ul {
@@ -264,7 +307,15 @@ label[for="menu-search-bar"] {
     height: auto;
 }
 
-
+/* Stile per le news principali */
+.news{
+    margin: 0 auto; height:auto
+}
+#first-news{
+    border-right: 1px solid #D2D2D2;
+    padding-right:50px;
+    padding-left:50px;
+}
 
 #main-headline .big-news-title {
     font-size: 52px;
@@ -283,8 +334,6 @@ label[for="menu-search-bar"] {
     margin: 8px 0;
 }
 
-
-
 .news-text {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -292,9 +341,18 @@ label[for="menu-search-bar"] {
 
 .news-image {
     width: 100%;
-    /* Aggiungi qui eventuali stili per l'immagine */
 }
 
+.news-item{
+    padding-bottom: 15px;
+}
+
+.typical-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight:bold;
+    margin-bottom:24px
+}
 
 .banner {
     display: flex;
@@ -328,12 +386,15 @@ label[for="menu-search-bar"] {
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
+    box-shadow: 0 0 5px rgba(217, 152, 20, 0.5);
+    border-radius: 10px
 }
 
 .telephone-form .mobile-number {
     font-size: 13px;
     color: #114b5f;
-
+    margin:0;
+    font-weight:bold
 }
 
 form input[type="tel"] {
@@ -345,6 +406,7 @@ form input[type="tel"] {
 form .checkbox {
     display: flex;
     align-items: center;
+    margin-bottom: 5px
 }
 
 form .checkbox label {
@@ -386,7 +448,26 @@ form .checkbox label {
     width: 80px;
 }
 
-/*Second row*/
+.newsletter-form{
+    box-shadow: 0 0 5px rgba(217, 152, 20, 0.5);
+    border-radius: 10px;
+    padding:16px
+}
+
+
+/*Stile per elementi della second row*/
+#second-news{
+    padding-left:50px;
+    padding-right:50px
+}
+
+.second-row-advertisement {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 55%;
+}
+
 .second-row-news {
     display: flex;
     flex-direction: column;
@@ -397,7 +478,6 @@ form .checkbox label {
     margin-bottom: 20px; /* Aggiunge spazio tra gli elementi */
     border-bottom: 1px solid #D2D2D2; /* Cambia il colore come preferisci */
     padding-bottom: 20px; /* Aggiunge spazio tra il testo e il bordo */
-
 }
 
 .second-row-news-image {
@@ -414,16 +494,26 @@ form .checkbox label {
 }
 
 
+/*Stile per le altre notizie*/
 .other-news{
     padding-left: 8%;
     padding-right: 8%;
+    margin: auto;
+    height:auto
 }
 
+.slideshow-element{
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.slideshow-element-bd{
+    border-left: 1px solid #D2D2D2;
+}
 
 .slideshow-element * {
     max-width: 100%; /* Imposta la larghezza massima di tutti gli elementi all'interno delle colonne */
 }
-
 
 .grid-news .grid-col .grid-col-title {
     font-family: Arial, Helvetica, sans-serif;
@@ -451,7 +541,6 @@ form .checkbox label {
     border: 1px solid #D2D2D2;
 
 }
-
 
 .column-news * {
     max-width: 100%; /* Imposta la larghezza massima di tutti gli elementi all'interno delle colonne */
@@ -485,15 +574,9 @@ form .checkbox label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
-/*
-.footer-icons {
-    margin-left: 10px;
-}
 
-.footer-text {
-    color: #6c7778;
-    margin-right: 10px;
-}*/
+
+/*Stile per footer*/
 
 .site-footer {
     display: flex;
@@ -526,9 +609,7 @@ form .checkbox label {
 }
 
 
-
-
-
+/*Media screen per cose che scompaiono/appaiono nella navbar*/
 
 @media (max-width: 500px) {
     #search-btn {
@@ -546,37 +627,31 @@ form .checkbox label {
 
 
 
+/*Oggetti cliccabili*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Stili per larghezza inferiore a 420px */
-@media (max-width: 420px) {
+img, h1, h2, h6, button, i{
+    cursor: pointer;
 }
 
-/* Stili per larghezza compresa tra 420px e 460px */
-@media (min-width: 420px) and (max-width: 460px) {
+img:hover, h1:hover, h2:hover, h6:hover, button:hover, i:hover, li:hover{
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
 }
 
-/* Stili per larghezza compresa tra 460px e 600px */
-@media (min-width: 460px) and (max-width: 600px) {
-}
 
-/* Stili per larghezza compresa tra 600px e 768px */
-@media (min-width: 600px) and (max-width: 768px) {
-}
 
-/* Stili per larghezza maggiore di 768px */
-@media (min-width: 768px) {
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

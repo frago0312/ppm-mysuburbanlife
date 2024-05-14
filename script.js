@@ -1,7 +1,7 @@
 /*Gestione eventi navbar*/
 
 document.getElementById('search-btn').addEventListener('click', function(event) {
-    var searchBar = document.getElementById('search-bar');
+    let searchBar = document.getElementById('search-bar');
     if (searchBar.style.display === 'none') {
         searchBar.style.display = 'block';
     } else {
@@ -11,7 +11,7 @@ document.getElementById('search-btn').addEventListener('click', function(event) 
 });
 
 document.addEventListener('click', function(event) {
-    var searchBar = document.getElementById('search-bar');
+    let searchBar = document.getElementById('search-bar');
     if (event.target !== searchBar) {
         searchBar.style.display = 'none';
     }
@@ -19,8 +19,8 @@ document.addEventListener('click', function(event) {
 
 /* Gestione eventi per il pulsante del menu */
 document.getElementById('menu-button').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    var overlay = document.getElementById('overlay');
+    let menu = document.getElementById('menu');
+    let overlay = document.getElementById('overlay');
     if (menu.classList.contains('show')) {
         menu.classList.remove('show');
         overlay.classList.remove('show');
@@ -32,8 +32,8 @@ document.getElementById('menu-button').addEventListener('click', function() {
 
 /* Gestione eventi per l'overlay */
 document.getElementById('overlay').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    var overlay = document.getElementById('overlay');
+    let menu = document.getElementById('menu');
+    let overlay = document.getElementById('overlay');
     if (menu.classList.contains('show')) {
         menu.classList.remove('show');
         overlay.classList.remove('show');
@@ -41,7 +41,7 @@ document.getElementById('overlay').addEventListener('click', function() {
 });
 
 // Seleziona l'icona di ricerca
-var searchIcon = document.querySelector('.search-btn .bi');
+let searchIcon = document.querySelector('.search-btn .bi');
 
 // Aggiungi un gestore di eventi click
 searchIcon.addEventListener('click', function() {
