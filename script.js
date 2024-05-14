@@ -65,7 +65,27 @@ const currentDateElement = document.getElementById("currentDate");
 currentDateElement.textContent = formatDate();
 
 
+// Seleziona l'immagine
+const image = document.getElementById('responsive-logo');
 
+// Funzione per cambiare l'immagine
+function changeImage() {
+    if (window.innerWidth < 600) {
+        // Se la larghezza della finestra è inferiore a 600px, cambia l'immagine
+        image.src = 'https://placehold.co/175x30/162B75/D99814?text=SHAW+LOCAL';
+        image.alt = 'News Network 2';
+    } else {
+        // Altrimenti, reimposta l'immagine originale
+        image.src = 'https://placehold.co/390x32/162B75/D99814?text=SHAW+LOCAL+News+Network';
+        image.alt = 'News Network 1';
+    }
+}
+
+// Chiama la funzione per cambiare l'immagine quando la finestra viene ridimensionata
+window.addEventListener('resize', changeImage);
+
+// Chiama la funzione all'avvio per controllare la dimensione iniziale della finestra
+changeImage();
 
 
 

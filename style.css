@@ -19,6 +19,12 @@ body{overflow-x:hidden}
     padding-left: 8px;
 }
 
+#responsive-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 
 /*Comportamento search bar*/
@@ -34,7 +40,7 @@ body{overflow-x:hidden}
     color: white !important;
     border: 0 !important;
     height: 32px !important;
-    width: 80px !important;
+    width: auto !important;
     font-size: 0.8rem !important
 }
 
@@ -247,7 +253,8 @@ label[for="menu-search-bar"] {
 }
 
 #first-responders img {
-    max-height: 100%;
+    width:80%;
+    height: auto;
 }
 
 
@@ -482,7 +489,6 @@ form .checkbox label {
 .site-footer {
     display: flex;
     align-items: center;
-    height: 56px;
     width: auto;
     background-color: white;
     border-top: 1px solid #d2d2d2;
@@ -490,14 +496,17 @@ form .checkbox label {
 }
 
 .site-footer .buttons {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 56px;
 }
 
 .site-footer .copyright-text{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 56px;
 }
 
 .site-footer .copyright-text h6 {
@@ -512,7 +521,19 @@ form .checkbox label {
 
 
 
-
+@media (max-width: 500px) {
+    #search-btn {
+        display: none;
+    }
+}
+@media(max-width: 768px) {
+    #bottom-element {
+        display: none;
+    }
+    #sign-in {
+        display: none;
+    }
+}
 
 
 
@@ -549,3 +570,4 @@ form .checkbox label {
 /* Stili per larghezza maggiore di 768px */
 @media (min-width: 768px) {
 }
+
