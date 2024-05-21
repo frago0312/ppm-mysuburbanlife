@@ -40,10 +40,9 @@ document.getElementById('overlay').addEventListener('click', function() {
     }
 });
 
-// Seleziona l'icona di ricerca
+/* Gestione eventi per il pulsante di ricerca */
 let searchIcon = document.querySelector('.search-btn .bi');
 
-// Aggiungi un gestore di eventi click
 searchIcon.addEventListener('click', function() {
     window.location.href = 'index.html';
 });
@@ -52,6 +51,7 @@ document.querySelector('#bottom-element .close-btn').addEventListener('click', f
     document.getElementById('bottom-element').style.display = 'none';
 });
 
+/* Funzione per data corrente */
 function formatDate() {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const currentDate = new Date();
@@ -65,10 +65,9 @@ const currentDateElement = document.getElementById("currentDate");
 currentDateElement.textContent = formatDate();
 
 
-// Seleziona l'immagine
+/* Logo responsivo per pagina piccola */
 const image = document.getElementById('responsive-logo');
 
-// Funzione per cambiare l'immagine
 function changeImage() {
     if (window.innerWidth < 600) {
         // Se la larghezza della finestra è inferiore a 600px, cambia l'immagine
@@ -81,10 +80,8 @@ function changeImage() {
     }
 }
 
-// Chiama la funzione per cambiare l'immagine quando la finestra viene ridimensionata
 window.addEventListener('resize', changeImage);
 
-// Chiama la funzione all'avvio per controllare la dimensione iniziale della finestra
 changeImage();
 
 
