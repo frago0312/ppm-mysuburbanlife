@@ -15,4 +15,4 @@ Questo progetto è una riproduzione frontend del portale di notizie locale statu
 * **HTML5:** Per la strutturazione semantica dei contenuti.
 * **CSS3:** Per lo styling personalizzato e le media queries.
 * **Bootstrap:** Per la gestione rapida del layout responsive e l'implementazione dei componenti dell'interfaccia.
-* **JavaScript:** Per la gestione della logica lato client e dell'interattività.
+* **JavaScript:** Per la gestione della logica lato client e dell'interattività. 
